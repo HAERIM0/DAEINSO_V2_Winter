@@ -6,6 +6,7 @@ import {
   InputBox,
   InputList,
   SelectBox,
+  InputBt,
 } from "./signup.style";
 import { BsPlayFill } from "react-icons/bs";
 
@@ -19,18 +20,18 @@ export default function Signup() {
         </SignupText>
         <InputBox>
           <InputList>
-            <text>이메일</text>
+            <b>이메일</b>
             <input></input>
-            <text>비밀번호</text>
+            <b>비밀번호</b>
             <input></input>
-            <text>이름</text>
+            <b>이름</b>
             <input></input>
-            <text>학번</text>
+            <b>학번</b>
             <input></input>
           </InputList>
         </InputBox>
         <SelectBox>
-          <text>기술 스택</text>
+          <b>기술 스택</b>
           <select>
             <option>웹</option>
             <option>서버</option>
@@ -38,8 +39,13 @@ export default function Signup() {
             <option>iOS</option>
             <option>임베디드</option>
             <option>디자인</option>
+            <option>게임</option>
           </select>
         </SelectBox>
+
+        <InputBt>
+          <button>가입하기</button>
+        </InputBt>
       </SignupBox>
     </SignupWrap>
   );
