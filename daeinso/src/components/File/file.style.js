@@ -6,7 +6,7 @@ export const FileIconBox = styled.div`
   align-items: center;
   margin-left: 18%;
   margin-bottom: 12px;
-  margin-top: 15px;
+  margin-top: 40px;
   .Fileplay-Icon {
     font-size: 35px;
     color: #ff8495;
