@@ -7,7 +7,6 @@ export default function Signuppage() {
   return (
     <>
       <Header />
-      {/* <Slide /> */}
       <Signup />
     </>
   );

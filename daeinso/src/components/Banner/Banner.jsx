@@ -2,7 +2,8 @@ import React from "react";
 
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import { Banner } from "./slide.style";
+import { BannerImg } from "./slide.style";
+import { BsFillPatchPlusFill } from "react-icons/bs";
 
 const images = [
   "https://user-images.githubusercontent.com/101709981/213920273-b6e2927c-bc9a-4ce7-aac3-0e2c7fa8fae3.png",
@@ -25,9 +26,9 @@ export default function Slide() {
       {images.map((img) => {
         return (
           <SplideSlide key={img}>
-            <Banner style={{ marginBottom: "72px" }}>
+            <BannerImg style={{ marginBottom: "72px" }}>
               <img src={img} />
-            </Banner>
+            </BannerImg>
           </SplideSlide>
         );
       })}

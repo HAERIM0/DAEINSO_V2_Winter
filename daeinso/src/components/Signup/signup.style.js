@@ -6,12 +6,11 @@ export const SignupBox = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
-  /* justify-content: center; */
 `;
 export const SignupText = styled.div`
   display: flex;
   align-items: center;
-  .Signup-Icon {
+  .Signupplay-Icon {
     font-size: 35px;
     color: #ff8495;
   }
@@ -23,7 +22,6 @@ export const InputList = styled.div`
 
   input {
     width: 320px;
-    /* width: 100%; */
     height: 45px;
     margin-bottom: 20px;
     background-color: #efefef;
@@ -35,8 +33,6 @@ export const InputList = styled.div`
 export const SelectBox = styled.div`
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* width: 20%; */
   select {
     width: 327px;
     height: 45px;
@@ -44,7 +40,6 @@ export const SelectBox = styled.div`
     background-color: #efefef;
     border-radius: 10px;
     text-indent: 10px;
-    /* font-size: 13px; */
   }
 `;
 

@@ -15,7 +15,7 @@ export default function Signup() {
     <SignupWrap>
       <SignupBox>
         <SignupText>
-          <BsPlayFill className="Signup-Icon" />
+          <BsPlayFill className="Signupplay-Icon" />
           <h2>회원가입</h2>
         </SignupText>
         <InputBox>
@@ -26,11 +26,15 @@ export default function Signup() {
             <input></input>
             <b>이름</b>
             <input></input>
-            <b>학번</b>
-            <input></input>
           </InputList>
         </InputBox>
         <SelectBox>
+          <b>학년</b>
+          <select>
+            <option>6기</option>
+            <option>7기</option>
+            <option>8기</option>
+          </select>
           <b>기술 스택</b>
           <select>
             <option>웹</option>

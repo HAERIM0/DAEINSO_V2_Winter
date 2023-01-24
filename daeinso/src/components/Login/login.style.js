@@ -46,7 +46,6 @@ export const LoginRightBox = styled.div`
 export const LoginRight = styled.div`
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   h1 {
     display: flex;
     justify-content: center;
@@ -55,7 +54,6 @@ export const LoginRight = styled.div`
   b {
     font-size: 12px;
     color: #949494;
-    /* margin-left: -250px; */
   }
 
   input {
@@ -70,7 +68,6 @@ export const LoginRight = styled.div`
   }
 
   button {
-    /* display: flex; */
     border-radius: 15px;
     outline: 0;
     border: 0;

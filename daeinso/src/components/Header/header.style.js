@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export const HeaderBox = styled.div`
-  /* display: flex; */
-`;
+export const HeaderBox = styled.div``;
 
 export const HeaderWrap = styled.div`
   display: flex;

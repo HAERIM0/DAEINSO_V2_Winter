@@ -1,12 +1,15 @@
 import React from "react";
 import Header from "../../components/Header/Header";
-import Slide from "../../components/Slide/Slide";
+import Posting from "../../components/Posting/Posting";
+// import Slide from "../../components/Banner/Banner";
+import Banner from "../../components/Banner/Banner";
 
 export default function Mainpage() {
   return (
     <>
       <Header />
-      <Slide />
+      <Banner />
+      <Posting />
     </>
   );
 }
