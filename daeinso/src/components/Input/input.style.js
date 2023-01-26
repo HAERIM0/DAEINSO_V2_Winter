@@ -87,7 +87,8 @@ export const ProjectExBottom = styled.div`
 `;
 export const TeamEx = styled.div`
   display: flex;
-  margin-left: 20.1%;
+  justify-content: center;
+  /* margin-left: 20.1%; */
   margin-top: 16px;
 `;
 
@@ -102,13 +103,14 @@ export const TeamExTop = styled.div`
     background-color: #efefef;
     border: 0;
     border-radius: 10px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     text-indent: 10px;
   }
 `;
 export const Info = styled.div`
   display: flex;
-  margin-left: 20.1%;
+  justify-content: center;
+  /* margin-left: 20.1%; */
   margin-top: 16px;
 `;
 export const InfoTop = styled.div`
@@ -122,7 +124,7 @@ export const InfoTop = styled.div`
     background-color: #efefef;
     border: 0;
     border-radius: 10px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     text-indent: 10px;
   }
 `;

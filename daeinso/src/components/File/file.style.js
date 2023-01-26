@@ -17,6 +17,11 @@ export const FileIconBox = styled.div`
 `;
 
 export const ImgUploadBt = styled.div`
+  /* position: absolute; */
+  position: relative;
+  /* width: 20%; */
+  /* display: flex; */
+  /* justify-content: space-around; */
   margin-left: 20%;
   button {
     display: flex;
