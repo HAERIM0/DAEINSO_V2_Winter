@@ -1,34 +1,21 @@
 import styled from "styled-components";
 
 export const TagWrap = styled.div`
-  /* display: flex; */
-  /* align-items: center; */
-  /* border-right: 1px solid black; */
-
-  /* height: ; */
-  /* height: 200px; */
+  display: flex;
+  align-items: center;
 `;
 
 export const Tlqkf = styled.div`
   display: flex;
-  border-right: 1px solid black;
-  width: 200px;
-  height: 100%;
+  align-items: center;
 `;
 export const TagList = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  width: 210px;
+  height: 700px;
   align-items: center;
-  /* margin-top: 40px;/ */
-  height: 760px;
-  width: 100%;
-
-  /* align-items: center;/ */
-  /* justify-content: center; */
-  /* height: 100vh; */
-
-  /* border-right: 1px solid black; */
+  justify-content: center;
 `;
 export const BrushIconBox = styled.div`
   display: flex;
@@ -40,7 +27,6 @@ export const BrushIconBox = styled.div`
   border-radius: 50px;
   color: gray;
   box-shadow: 3px 4px 3px 3px #ffe5e9;
-  /* margin-left: 10px; */
   margin-bottom: 30px;
 `;
 export const BrushIcon = styled.div`
@@ -62,7 +48,6 @@ export const EarthIconBox = styled.div`
   border-radius: 50px;
   color: gray;
   box-shadow: 3px 4px 3px 3px #ffe5e9;
-  /* margin-left: 10px; */
   margin-bottom: 30px;
 `;
 export const EarthIcon = styled.div`
@@ -85,7 +70,6 @@ export const AndroidIconBox = styled.div`
   border-radius: 50px;
   color: gray;
   box-shadow: 3px 4px 3px 3px #ffe5e9;
-  /* margin-left: 10px; */
   margin-bottom: 30px;
 `;
 export const AndroidIcon = styled.div`
@@ -108,7 +92,6 @@ export const ServerIconBox = styled.div`
   border-radius: 50px;
   color: gray;
   box-shadow: 3px 4px 3px 3px #ffe5e9;
-  /* margin-left: 10px; */
   margin-bottom: 30px;
 `;
 export const ServerIcon = styled.div`
@@ -131,7 +114,6 @@ export const AppleIconBox = styled.div`
   border-radius: 50px;
   color: gray;
   box-shadow: 3px 4px 3px 3px #ffe5e9;
-  /* margin-left: 10px; */
   margin-bottom: 30px;
 `;
 export const AppleIcon = styled.div`
