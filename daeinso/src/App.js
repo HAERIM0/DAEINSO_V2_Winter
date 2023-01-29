@@ -5,6 +5,7 @@ import Signuppage from "./page/Signuppage/Signuppage";
 import Mainpage from "./page/Mainpage/Mainpage";
 import Inputpage from "./page/Inputpage/Inputpage";
 import Projectlist from "./page/Projectlistpage/Projectlist";
+import Mypage from "./page/Mypage/Mypage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/main" element={<Mainpage />} />
         <Route path="/input" element={<Inputpage />} />
         <Route path="/project" element={<Projectlist />} />
+        <Route path="/mypage" element={<Mypage />} />
       </Routes>
     </BrowserRouter>
   );
