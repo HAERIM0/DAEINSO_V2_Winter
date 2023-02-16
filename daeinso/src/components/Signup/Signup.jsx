@@ -9,8 +9,23 @@ import {
   InputBt,
 } from "./signup.style";
 import { BsPlayFill } from "react-icons/bs";
+import { useRecoilState } from "recoil";
+import {
+  singupAgeAtom,
+  singupEmailAtom,
+  singupNameAtom,
+  singupPasswordAtom,
+  singupStackAtom,
+} from "../../recoil/postAtom";
+import useSignup from "../../hooks/useSignup";
 
 export default function Signup() {
+  const { onEmail, onName, onPassword } = useSignup();
+  const [email, setEmail] = useRecoilState(singupEmailAtom);
+  const [password, setPassword] = useRecoilState(singupPasswordAtom);
+  const [name, setName] = useRecoilState(singupNameAtom);
+  const [age, setAge] = useRecoilState(singupAgeAtom);
+  const [stack, setStack] = useRecoilState(singupStackAtom);
   return (
     <SignupWrap>
       <SignupBox>
@@ -21,11 +36,15 @@ export default function Signup() {
         <InputBox>
           <InputList>
             <b>이메일</b>
-            <input></input>
+            <input value={email} onChange={(e) => onEmail(e)}></input>
             <b>비밀번호</b>
-            <input></input>
+            <input
+              type="number"
+              value={password}
+              onChange={(e) => onPassword(e)}
+            ></input>
             <b>이름</b>
-            <input></input>
+            <input value={name} onChange={(e) => onName(e)}></input>
           </InputList>
         </InputBox>
         <SelectBox>
