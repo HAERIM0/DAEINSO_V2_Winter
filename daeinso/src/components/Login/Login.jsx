@@ -7,8 +7,13 @@ import {
   LoginLeftBox,
   LoginRightBox,
 } from "./login.style";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
+  const navigate = useNavigate();
+  const onClicksingup = () => {
+    navigate("/signup");
+  };
   return (
     <MainWrap>
       <LoginBox>
@@ -34,6 +39,10 @@ export default function Login() {
             <input placeholder="이메일을 입력해주세요"></input>
             <b>Password</b>
             <input placeholder="비밀번호를 입력해주세요"></input>
+            <text className="text" onClick={onClicksingup}>
+              회원가입
+            </text>
+
             <button>로그인</button>
           </LoginRight>
         </LoginRightBox>

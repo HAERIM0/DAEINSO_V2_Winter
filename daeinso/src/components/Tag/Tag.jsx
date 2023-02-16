@@ -21,7 +21,6 @@ export default function Tag() {
   return (
     <TagWrap>
       <Tlqkf>
-        {" "}
         <TagList>
           <BrushIconBox>
             <BrushIcon>

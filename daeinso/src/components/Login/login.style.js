@@ -67,6 +67,13 @@ export const LoginRight = styled.div`
     margin-bottom: 20px;
   }
 
+  .text {
+    margin-left: 250px;
+    font-size: 12px;
+    margin-top: -15px;
+    cursor: pointer;
+  }
+
   button {
     border-radius: 15px;
     outline: 0;
