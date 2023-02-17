@@ -1,16 +1,11 @@
 import React from "react";
-import { useRef } from "react";
-
-import { useFile } from "../../hooks/useFile";
+import { useFile } from "../../hooks/Inputhook/useFile";
 import { AiFillCamera } from "react-icons/ai";
 import { ImgUploadBt, FileIconBox, FileBox } from "./file.style";
 import { BsPlayFill } from "react-icons/bs";
 export default function File() {
-  const { uploadImg } = useFile();
-  const imgRef = useRef();
-  const onClickImg = () => {
-    imgRef.current.click();
-  };
+  const { uploadImg, imgRef, onClickImg } = useFile();
+
   return (
     <FileBox>
       <FileIconBox>

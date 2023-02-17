@@ -13,5 +13,11 @@ export const useFile = () => {
     try {
     } catch (e) {}
   };
-  return { uploadImg };
+
+  const imgRef = useRef();
+
+  const onClickImg = () => {
+    imgRef.current.click();
+  };
+  return { uploadImg, imgRef, onClickImg };
 };

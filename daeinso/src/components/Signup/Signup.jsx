@@ -17,7 +17,7 @@ import {
   singupPasswordAtom,
   singupStackAtom,
 } from "../../recoil/postAtom";
-import useSignup from "../../hooks/useSignup";
+import useSignup from "../../hooks/Signuphook/useSignup";
 
 export default function Signup() {
   const { onEmail, onName, onPassword } = useSignup();

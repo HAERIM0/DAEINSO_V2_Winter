@@ -5,7 +5,7 @@ import {
   singupNameAtom,
   singupPasswordAtom,
   singupStackAtom,
-} from "../recoil/postAtom";
+} from "../../recoil/postAtom";
 
 const useSignup = () => {
   const [email, setEmail] = useRecoilState(singupEmailAtom);

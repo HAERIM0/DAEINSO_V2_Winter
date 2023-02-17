@@ -13,9 +13,10 @@ export const HeaderLeft = styled.div`
   color: white;
   margin-left: 50px;
   cursor: pointer;
-  .project-Bt {
-    margin-left: 100px;
-  }
+`;
+
+export const Text = styled.div`
+  margin-left: 100px;
 `;
 export const HeaderRight = styled.div`
   display: flex;
