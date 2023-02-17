@@ -22,11 +22,11 @@ export const HeaderRight = styled.div`
   display: flex;
   color: white;
   align-items: center;
-  margin-right: 50px;
+  margin-right: 60px;
   cursor: pointer;
   p {
-    font-size: 14px;
-    margin-right: 10px;
+    font-size: 16px;
+    margin-right: 14px;
   }
   .header-Icon {
     font-size: 25px;

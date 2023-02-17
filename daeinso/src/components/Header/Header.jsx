@@ -7,25 +7,23 @@ import {
   Text,
 } from "./header.style";
 import { BsFillPeopleFill } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
+import { useNav } from "../../hooks/Nav/useNav";
 
 export default function Header() {
-  const navigate = useNavigate();
-  const PostonClick = () => {
-    navigate("/project");
-  };
+  const { HomeNav, ProjectNav, MyNav } = useNav();
   return (
     <HeaderBox>
       <HeaderWrap>
         <HeaderLeft>
-          <h2>DAEINSO</h2>
-          <Text onClick={PostonClick}>프로젝트</Text>
+          <h2 onClick={HomeNav}>DAEINSO</h2>
+          <Text onClick={ProjectNav}>프로젝트</Text>
         </HeaderLeft>
         <HeaderRight>
-          <p>회원가입</p>
-          <p>/</p>
-          <p>로그인</p>
-          <BsFillPeopleFill className="header-Icon"></BsFillPeopleFill>
+          <p>로그아웃</p>
+          <BsFillPeopleFill
+            className="header-Icon"
+            onClick={MyNav}
+          ></BsFillPeopleFill>
         </HeaderRight>
       </HeaderWrap>
     </HeaderBox>

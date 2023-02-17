@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   SignupWrap,
   SignupBox,
@@ -9,6 +9,7 @@ import {
   InputBt,
 } from "./signup.style";
 import { BsPlayFill } from "react-icons/bs";
+import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 import { useRecoilState } from "recoil";
 import {
   singupAgeAtom,
@@ -18,6 +19,7 @@ import {
   singupStackAtom,
 } from "../../recoil/postAtom";
 import useSignup from "../../hooks/Signuphook/useSignup";
+import { AGE } from "../../constants/age/AGE";
 
 export default function Signup() {
   const { onEmail, onName, onPassword } = useSignup();
@@ -26,6 +28,19 @@ export default function Signup() {
   const [name, setName] = useRecoilState(singupNameAtom);
   const [age, setAge] = useRecoilState(singupAgeAtom);
   const [stack, setStack] = useRecoilState(singupStackAtom);
+  const [agePopup, setAgePopup] = useState(false);
+  const [stackPopup, setStackPopup] = useState(false);
+
+  const ageopen = () => {
+    setAgePopup(true);
+  };
+
+  const ageclose = () => {
+    setAgePopup(false);
+  };
+  const stackopen = () => {
+    setStack(true);
+  };
   return (
     <SignupWrap>
       <SignupBox>
@@ -49,11 +64,19 @@ export default function Signup() {
         </InputBox>
         <SelectBox>
           <b>학년</b>
-          <select>
-            <option>6기</option>
-            <option>7기</option>
-            <option>8기</option>
-          </select>
+          <button onClick={ageopen} value="false">
+            <AiFillCaretDown />
+          </button>
+          {agePopup
+            ? AGE.map((item) => (
+                <button onClick={() => setAge(item.payload)}>
+                  {item.name}
+                </button>
+              ))
+            : null}
+          <button onClick={ageclose} value="true">
+            <AiFillCaretUp />
+          </button>
           <b>기술 스택</b>
           <select>
             <option>웹</option>
