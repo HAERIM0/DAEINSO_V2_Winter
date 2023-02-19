@@ -1,29 +1,27 @@
 import { useRecoilState } from "recoil";
 import {
-  singupAgeAtom,
-  singupEmailAtom,
-  singupNameAtom,
-  singupPasswordAtom,
-  singupStackAtom,
+  signupAgeAtom,
+  signupEmailAtom,
+  signupNameAtom,
+  signupPasswordAtom,
+  signupStackAtom,
 } from "../../recoil/postAtom";
 
 const useSignup = () => {
-  const [email, setEmail] = useRecoilState(singupEmailAtom);
-  const [password, setPassword] = useRecoilState(singupPasswordAtom);
-  const [name, setName] = useRecoilState(singupNameAtom);
-  const [age, setAge] = useRecoilState(singupAgeAtom);
-  const [stack, setStack] = useRecoilState(singupStackAtom);
+  const [signemail, setSignEmail] = useRecoilState(signupEmailAtom);
+  const [signpassword, setSignPassword] = useRecoilState(signupPasswordAtom);
+  const [signname, setSignName] = useRecoilState(signupNameAtom);
 
   const onName = (e) => {
-    setName(e.target.value);
+    setSignName(e.target.value);
   };
 
   const onEmail = (e) => {
-    setEmail(e.target.value);
+    setSignEmail(e.target.value);
   };
 
   const onPassword = (e) => {
-    setPassword(e.target.value);
+    setSignPassword(e.target.value);
   };
   return {
     onEmail,

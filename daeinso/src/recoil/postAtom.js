@@ -1,26 +1,26 @@
 import { atom } from "recoil";
 
-export const singupEmailAtom = atom({
+export const signupEmailAtom = atom({
   key: "singupEmailAtom",
   default: "",
 });
 
-export const singupPasswordAtom = atom({
+export const signupPasswordAtom = atom({
   key: "singupPasswordAtom",
   default: "",
 });
 
-export const singupNameAtom = atom({
+export const signupNameAtom = atom({
   key: "singupNameAtom",
   default: "",
 });
 
-export const singupAgeAtom = atom({
+export const signupAgeAtom = atom({
   key: "singupAgeAtom",
   default: "",
 });
 
-export const singupStackAtom = atom({
+export const signupStackAtom = atom({
   key: "singupStackAtom",
   default: "",
 });

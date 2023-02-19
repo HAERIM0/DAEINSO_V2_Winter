@@ -9,7 +9,7 @@ import CONFIG from "../../config.json";
 export const customAxios = axios.create({
   baseURL: `${CONFIG.server}`,
   headers: {
-    [AHTHORIZATION]: `Bearer ${localStorage.getItem(ACCESS_KEY)}`,
+    [AHTHORIZATION]: `${localStorage.getItem(ACCESS_KEY)}`,
   },
 });
 
