@@ -1,28 +1,16 @@
 import React from "react";
-import {
-  InputBox,
-  InputTop,
-  ProjectEx,
-  TeamEx,
-  Info,
-  InputTopInT,
-  InputTopInB,
-  ProjectExTop,
-  ProjectExBottom,
-  TeamExTop,
-  InfoTop,
-} from "./input.style";
+import * as I from "./input.style";
 
 export default function Input() {
   return (
     <div>
-      <InputBox>
-        <InputTop>
-          <InputTopInT>
+      <I.InputBox>
+        <I.InputTop>
+          <I.InputTopInT>
             <b>제목</b>
             <input></input>
-          </InputTopInT>
-          <InputTopInB>
+          </I.InputTopInT>
+          <I.InputTopInB>
             <b>모든분야</b>
             <select>
               <option>웹</option>
@@ -33,31 +21,31 @@ export default function Input() {
               <option>디자인</option>
               <option>게임</option>
             </select>
-          </InputTopInB>
-        </InputTop>
-        <ProjectEx>
-          <ProjectExTop>
+          </I.InputTopInB>
+        </I.InputTop>
+        <I.ProjectEx>
+          <I.ProjectExTop>
             <b>프로젝트 설명</b>
             <textarea></textarea>
-          </ProjectExTop>
-          <ProjectExBottom>
+          </I.ProjectExTop>
+          <I.ProjectExBottom>
             <b>해야할 일</b>
             <textarea></textarea>
-          </ProjectExBottom>
-        </ProjectEx>
-        <TeamEx>
-          <TeamExTop>
+          </I.ProjectExBottom>
+        </I.ProjectEx>
+        <I.TeamEx>
+          <I.TeamExTop>
             <b>팀 설명</b>
             <input></input>
-          </TeamExTop>
-        </TeamEx>
-        <Info>
-          <InfoTop>
+          </I.TeamExTop>
+        </I.TeamEx>
+        <I.Info>
+          <I.InfoTop>
             <b>기타정보</b>
             <input></input>
-          </InfoTop>
-        </Info>
-      </InputBox>
+          </I.InfoTop>
+        </I.Info>
+      </I.InputBox>
     </div>
   );
 }

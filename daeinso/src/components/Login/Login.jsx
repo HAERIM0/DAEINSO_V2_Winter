@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  MainWrap,
-  LoginBox,
-  LoginLeft,
-  LoginRight,
-  LoginLeftBox,
-  LoginRightBox,
-} from "./login.style";
+import * as L from "./login.style";
 import { useNavigate } from "react-router-dom";
 
 export default function Login() {
@@ -15,10 +8,10 @@ export default function Login() {
     navigate("/signup");
   };
   return (
-    <MainWrap>
-      <LoginBox>
-        <LoginLeftBox>
-          <LoginLeft>
+    <L.MainWrap>
+      <L.LoginBox>
+        <L.LoginLeftBox>
+          <L.LoginLeft>
             <h2>
               인력이 필요 하신가요?
               <br />
@@ -30,10 +23,10 @@ export default function Login() {
               <br />
               '대인소'로 오세요!
             </p>
-          </LoginLeft>
-        </LoginLeftBox>
-        <LoginRightBox>
-          <LoginRight>
+          </L.LoginLeft>
+        </L.LoginLeftBox>
+        <L.LoginRightBox>
+          <L.LoginRight>
             <h1>Login</h1>
             <b>Email</b>
             <input placeholder="이메일을 입력해주세요"></input>
@@ -44,9 +37,9 @@ export default function Login() {
             </text>
 
             <button>로그인</button>
-          </LoginRight>
-        </LoginRightBox>
-      </LoginBox>
-    </MainWrap>
+          </L.LoginRight>
+        </L.LoginRightBox>
+      </L.LoginBox>
+    </L.MainWrap>
   );
 }

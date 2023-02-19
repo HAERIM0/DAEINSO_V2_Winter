@@ -1,8 +1,7 @@
 import React from "react";
-
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import { BannerImg } from "./slide.style";
+import * as B from "./slide.style";
 import { BsFillPatchPlusFill } from "react-icons/bs";
 
 const images = [
@@ -26,9 +25,9 @@ export default function Slide() {
       {images.map((img) => {
         return (
           <SplideSlide key={img}>
-            <BannerImg style={{ marginBottom: "72px" }}>
+            <B.BannerImg style={{ marginBottom: "72px" }}>
               <img src={img} />
-            </BannerImg>
+            </B.BannerImg>
           </SplideSlide>
         );
       })}

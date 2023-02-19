@@ -33,14 +33,59 @@ export const InputList = styled.div`
 export const SelectBox = styled.div`
   display: flex;
   flex-direction: column;
-  select {
-    width: 327px;
-    height: 45px;
-    margin-bottom: 30px;
-    background-color: #efefef;
-    border-radius: 10px;
-    text-indent: 10px;
+`;
+
+export const SelectAge = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  button {
+    width: 325px;
+    height: 23px;
+    border: 0;
   }
+  .ageopenBt {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .agecloseBt {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+`;
+export const SelectStack = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  button {
+    width: 325px;
+    height: 23px;
+    border: 0;
+  }
+  .stackopenBt {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .stackcloseBt {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+`;
+
+export const AgeList = styled.div`
+  display: flex;
+  justify-content: center;
+  background-color: #efefef;
+  font-size: 14px;
+  cursor: pointer;
+`;
+
+export const StackList = styled.div`
+  display: flex;
+  justify-content: center;
+  background-color: #efefef;
+  font-size: 14px;
+  cursor: pointer;
 `;
 
 export const InputBt = styled.div`

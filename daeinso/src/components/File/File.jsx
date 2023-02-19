@@ -1,17 +1,17 @@
 import React from "react";
 import { useFile } from "../../hooks/Inputhook/useFile";
 import { AiFillCamera } from "react-icons/ai";
-import { ImgUploadBt, FileIconBox, FileBox } from "./file.style";
+import * as F from "./file.style";
 import { BsPlayFill } from "react-icons/bs";
 export default function File() {
   const { uploadImg, imgRef, onClickImg } = useFile();
 
   return (
-    <FileBox>
-      <FileIconBox>
+    <F.FileBox>
+      <F.FileIconBox>
         <BsPlayFill className="Fileplay-Icon" />
         <b>의뢰하기</b>
-      </FileIconBox>
+      </F.FileIconBox>
       <input
         multiple="multiple"
         onChange={uploadImg}
@@ -19,11 +19,11 @@ export default function File() {
         ref={imgRef}
         style={{ display: "none" }}
       ></input>
-      <ImgUploadBt>
+      <F.ImgUploadBt>
         <button onClick={onClickImg}>
           <AiFillCamera className="Filecamera-Icon" />
         </button>
-      </ImgUploadBt>
-    </FileBox>
+      </F.ImgUploadBt>
+    </F.FileBox>
   );
 }
