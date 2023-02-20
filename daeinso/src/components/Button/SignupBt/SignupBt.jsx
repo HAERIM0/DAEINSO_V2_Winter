@@ -2,6 +2,7 @@ import React from "react";
 import { customAxios } from "../../../lib/axios/customAxios";
 import { useRecoilState } from "recoil";
 import * as S from "../../Signup/signup.style";
+import { useNavigate } from "react-router-dom";
 import {
   signupAgeAtom,
   signupEmailAtom,
@@ -11,6 +12,7 @@ import {
 } from "../../../recoil/postAtom";
 
 export default function SignupBt() {
+  const navigate = useNavigate();
   const [signemail, setSingEmail] = useRecoilState(signupEmailAtom);
   const [signpassword, setSingPassword] = useRecoilState(signupPasswordAtom);
   const [signname, setSingName] = useRecoilState(signupNameAtom);
@@ -29,6 +31,10 @@ export default function SignupBt() {
       console.log(data);
       const res = await customAxios.post("/user/register", data);
       console.log(res);
+      navigate("/");
+      setSingEmail("");
+      setSingName("");
+      setSingPassword("");
     } catch (e) {
       console.log(e);
     }
@@ -36,7 +42,9 @@ export default function SignupBt() {
 
   return (
     <S.InputBt>
-      <button onClick={Signupload}>가입하기</button>
+      <button onClick={Signupload} className="signup-Bt">
+        가입하기
+      </button>
     </S.InputBt>
   );
 }

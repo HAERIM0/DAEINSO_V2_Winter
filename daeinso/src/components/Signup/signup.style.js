@@ -97,5 +97,11 @@ export const InputBt = styled.div`
     height: 45px;
     color: white;
     border-radius: 15px;
+
+    transition: 0.2s al;
+  }
+
+  .signup-Bt:active {
+    transform: scale(0.98);
   }
 `;

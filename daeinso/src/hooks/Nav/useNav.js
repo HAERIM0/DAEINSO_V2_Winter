@@ -18,5 +18,9 @@ export const useNav = () => {
     navigate("/Input");
   };
 
-  return { ProjectNav, HomeNav, MyNav, InputNav };
+  const SignupNav = () => {
+    navigate("/signup");
+  };
+
+  return { ProjectNav, HomeNav, MyNav, InputNav, SignupNav };
 };

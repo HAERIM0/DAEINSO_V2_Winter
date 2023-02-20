@@ -1,12 +1,19 @@
 import React from "react";
 import * as L from "./login.style";
 import { useNavigate } from "react-router-dom";
+import { signupEmailAtom, signupPasswordAtom } from "../../recoil/postAtom";
+import useSignup from "../../hooks/Signuphook/useSignup";
+import { useRecoilState } from "recoil";
+import { useNav } from "../../hooks/Nav/useNav";
+import LoginBt from "../Button/LoginBt/LoginBt";
 
 export default function Login() {
+  const { onEmail, onPassword } = useSignup();
+  const { SignupNav } = useNav();
   const navigate = useNavigate();
-  const onClicksingup = () => {
-    navigate("/signup");
-  };
+  const [signemail, setSignEmail] = useRecoilState(signupEmailAtom);
+  const [signpassword, setSignPassword] = useRecoilState(signupPasswordAtom);
+
   return (
     <L.MainWrap>
       <L.LoginBox>
@@ -29,14 +36,22 @@ export default function Login() {
           <L.LoginRight>
             <h1>Login</h1>
             <b>Email</b>
-            <input placeholder="이메일을 입력해주세요"></input>
+            <input
+              placeholder="이메일을 입력해주세요"
+              value={signemail}
+              onChange={(e) => onEmail(e)}
+            ></input>
             <b>Password</b>
-            <input placeholder="비밀번호를 입력해주세요"></input>
-            <text className="text" onClick={onClicksingup}>
+            <input
+              placeholder="비밀번호를 입력해주세요"
+              value={signpassword}
+              onChange={(e) => onPassword(e)}
+            ></input>
+            <text className="text" onClick={SignupNav}>
               회원가입
             </text>
 
-            <button>로그인</button>
+            <LoginBt />
           </L.LoginRight>
         </L.LoginRightBox>
       </L.LoginBox>
