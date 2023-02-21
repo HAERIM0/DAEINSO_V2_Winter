@@ -1,9 +1,11 @@
-import React, { useRef, useState } from "react";
+import { useRef } from "react";
+import customAxios from "../../lib/axios/customAxios";
+import { postingImg } from "../../recoil/postingAtom";
+import { useRecoilState } from "recoil";
 
 export const useFile = () => {
+  const [fileUrl, setFileUrl] = useRecoilState(postingImg);
   const uploadImg = async (e) => {
-    // const [fileUrl, setFileUrl] = useState();
-
     const files = e.target.files;
     const formData = new FormData();
 
@@ -11,7 +13,15 @@ export const useFile = () => {
       formData.append("file", files[i]);
     }
     try {
-    } catch (e) {}
+      const { data } = await customAxios.post("/file", formData);
+      const arr = [];
+      data.data.forEach((value) => {
+        arr.push(value);
+      });
+      setFileUrl(arr);
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   const imgRef = useRef();

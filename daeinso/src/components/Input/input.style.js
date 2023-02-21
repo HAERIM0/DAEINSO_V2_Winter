@@ -30,6 +30,9 @@ export const InputTopInB = styled.div`
   flex-direction: column;
   font-size: 14px;
   color: #1a1a1a;
+  /* width: 510px;
+  height: 42px; */
+  /* background-color: #1a1a1a; */
 
   select {
     width: 510px;
@@ -126,5 +129,15 @@ export const InfoTop = styled.div`
     border-radius: 10px;
     /* margin-right: 20px; */
     text-indent: 10px;
+  }
+`;
+
+export const StackList = styled.div`
+  display: flex;
+  /* width: 700px; */
+  /* background-color: black; */
+
+  button {
+    background-color: white;
   }
 `;
