@@ -20,6 +20,8 @@ export default function LoginBt() {
       const Lres = await customAxios.post("/user/login", Ldata);
       console.log(Lres);
       navigate("/main");
+      setSingEmail("");
+      setSingPassword("");
     } catch (e) {
       console.log(e);
     }

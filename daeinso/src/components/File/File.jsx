@@ -3,8 +3,11 @@ import { useFile } from "../../hooks/Inputhook/useFile";
 import { AiFillCamera } from "react-icons/ai";
 import * as F from "./file.style";
 import { BsPlayFill } from "react-icons/bs";
+import { useRecoilState } from "recoil";
+import { postingImg } from "../../recoil/postingAtom";
 export default function File() {
   const { uploadImg, imgRef, onClickImg } = useFile();
+  const [fileUrl, setFileUrl] = useRecoilState(postingImg);
 
   return (
     <F.FileBox>
