@@ -141,3 +141,22 @@ export const StackList = styled.div`
     background-color: white;
   }
 `;
+
+export const PostingBt = styled.div`
+  .postingBt {
+    border-radius: 15px;
+    outline: 0;
+    border: 0;
+    background-color: #ff8495;
+    color: white;
+    margin-top: 28px;
+    width: 13%;
+    height: 40px;
+    margin-left: 1165px;
+    transition: 0.2s al;
+  }
+
+  .postingBt:active {
+    transform: scale(0.98);
+  }
+`;

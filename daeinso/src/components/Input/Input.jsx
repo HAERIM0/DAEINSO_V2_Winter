@@ -11,6 +11,7 @@ import {
 } from "../../recoil/postingAtom";
 import useInput from "../../hooks/Inputhook/useInput";
 import { STACK } from "../../constants/stack/STACK";
+import PostingBt from "../Button/PostingBt/PostingBt";
 
 export default function Input() {
   const { onTeam, onInfo, onProject, onTitle, onTodo } = useInput();
@@ -41,7 +42,6 @@ export default function Input() {
                     border: `1px solid ${item.color}`,
                     backgroundColor: poststack === item.payload && item.color,
                     fontSize: "11.5px",
-                    // color: poststack !== item.name ? item.color : "white",
                   }}
                   onClick={() => setPostStack(item.payload)}
                 >
@@ -76,6 +76,7 @@ export default function Input() {
             <input value={postInfo} onChange={(e) => onInfo(e)}></input>
           </I.InfoTop>
         </I.Info>
+        <PostingBt />
       </I.InputBox>
     </div>
   );

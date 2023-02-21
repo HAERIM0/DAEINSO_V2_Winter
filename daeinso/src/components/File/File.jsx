@@ -7,7 +7,6 @@ import { useRecoilState } from "recoil";
 import { postingImg } from "../../recoil/postingAtom";
 export default function File() {
   const { uploadImg, imgRef, onClickImg } = useFile();
-  const [fileUrl, setFileUrl] = useRecoilState(postingImg);
 
   return (
     <F.FileBox>
