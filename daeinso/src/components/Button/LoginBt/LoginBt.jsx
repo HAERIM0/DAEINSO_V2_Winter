@@ -3,7 +3,9 @@ import { useRecoilState } from "recoil";
 import { Navigate, useNavigate } from "react-router-dom";
 import * as L from "../../Login/login.style";
 import { signupEmailAtom, signupPasswordAtom } from "../../../recoil/postAtom";
-import customAxios from "../../../lib/axios/customAxios";
+import { customAxios } from "../../../lib/axios/customAxios";
+import { ACCESS_KEY } from "../../../constants/auth/auth.constants";
+// import customAxios from "../../../lib/axios/customAxios";
 
 export default function LoginBt() {
   const navigate = useNavigate();
@@ -12,14 +14,17 @@ export default function LoginBt() {
 
   const Loginupload = async ({}) => {
     try {
-      const Ldata = {
+      const data = {
         email: signemail,
         password: signpassword,
       };
-      console.log(Ldata);
-      const Lres = await customAxios.post("/user/login", Ldata);
-      console.log(Lres);
+      console.log(data);
+      const res = await customAxios.post("/user/login", data);
+
+      console.log(res);
       navigate("/main");
+      localStorage.setItem("access_token", res.data.data.token);
+
       setSingEmail("");
       setSingPassword("");
     } catch (e) {
