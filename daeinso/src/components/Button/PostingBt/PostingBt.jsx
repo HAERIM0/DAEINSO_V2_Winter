@@ -12,7 +12,6 @@ import {
   postingTodo,
 } from "../../../recoil/postingAtom";
 import { customAxios } from "../../../lib/axios/customAxios";
-// import customAxios from "../../../lib/axios/customAxios";
 
 export default function PostingBt() {
   const navigate = useNavigate();
