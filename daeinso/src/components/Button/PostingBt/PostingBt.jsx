@@ -26,7 +26,7 @@ export default function PostingBt() {
   const Postupload = async ({}) => {
     try {
       const Pdata = {
-        image: fileUrl,
+        image: fileUrl[0].files,
         title: posttitle,
         stack: poststack,
         projectIntro: postproject,

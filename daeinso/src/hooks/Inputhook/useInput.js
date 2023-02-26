@@ -15,22 +15,27 @@ const useInput = () => {
   const [postInfo, setPostInfo] = useRecoilState(postingInfo);
   const onTitle = (e) => {
     setPostTitle(e.target.value);
+    console.log(posttitle);
   };
 
   const onProject = (e) => {
     setPostProject(e.target.value);
+    console.log(postproject);
   };
 
   const onTodo = (e) => {
     setPostTodo(e.target.value);
+    console.log(posttodo);
   };
 
   const onTeam = (e) => {
     setPostTeam(e.target.value);
+    console.log(postteam);
   };
 
   const onInfo = (e) => {
     setPostInfo(e.target.value);
+    console.log(postInfo);
   };
 
   return {

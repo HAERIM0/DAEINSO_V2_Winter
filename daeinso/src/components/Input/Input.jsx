@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useRecoilState } from "recoil";
 import * as I from "./input.style";
 import {
@@ -21,6 +21,15 @@ export default function Input() {
   const [posttodo, setPostTodo] = useRecoilState(postingTodo);
   const [postteam, setPostTeam] = useRecoilState(postingTeam);
   const [postInfo, setPostInfo] = useRecoilState(postingInfo);
+
+  useEffect(() => {
+    console.log("title", posttitle);
+    console.log("stack", poststack);
+    console.log("project", postproject);
+    console.log("todo", posttodo);
+    console.log("team", postteam);
+    console.log("info", postInfo);
+  }, [poststack]);
   return (
     <div>
       <I.InputBox>
@@ -32,7 +41,6 @@ export default function Input() {
           <I.InputTopInB>
             <b>모든분야</b>
             <I.StackList>
-              {" "}
               {STACK.map((item) => (
                 <button
                   style={{
